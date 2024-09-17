@@ -1,0 +1,65 @@
+
+'use client'
+import { Metadata } from "next";
+
+import { useEffect, useState } from "react";
+import Navbar from "../../components/Navbar";
+
+import viza from "@/public/text";
+import { time } from "console";
+
+type Props = {
+  params: { vizaid: string };
+};
+
+
+export default function ProductDetails({ params }: Props) {
+  const [product, setProduct] = useState<{ title: { mn: string; en: string; }, info: { mn: string[]}, time: {mn: string[]}, material: {mn: string[]}; background: string; } | null>(null);
+    useEffect(() => {
+        const product = viza.find((product, index) => index === parseInt(params.vizaid));
+        if (!product) {
+            setProduct(viza[0])
+            return;
+        }
+        setProduct(product);
+    }, [params.vizaid]);
+   
+  return (
+    <div className="min-h-screen">
+    <div className="mx-auto">
+            <Navbar />
+            <section className="flex min-h-screen w-full snap-start py-24 m-2" id="contact">
+                <div className="container mx-auto  xl:max-w-7xl">
+                  <div className="pt-12">
+                    <h2 className="text-xl lg:text-3xl uppercase font-black text-center">{product?.title?.mn}</h2>
+                  </div>
+                  <ul>
+                    {product?.info?.mn.map((info, index) => (
+                      <li key={index} className="text-sm lg:text-lg text-justify list-disc">{info}</li>
+                    ))}
+                  </ul>
+                  {
+                    product?.time.mn && product?.time.mn.length > 0 && (
+                      <ul>
+                        <h3 className="text-lg lg:text-xl uppercase font-black pl-3">Цаг авахад</h3>
+                        {product?.time.mn.map((time, index) => (
+                          <li key={index} className="text-sm lg:text-lg text-justify list-disc">{time}</li>
+                        ))}
+                      </ul>
+                    )
+                  }
+                 
+                    <ul>
+                      <h3 className="text-lg lg:text-xl uppercase font-black pl-3">{
+                        product?.time.mn && product?.time.mn.length > 0 ? "Ярилцлаганд ороход бүрдүүлэх материалиуд" : "Бүрдүүлэх материалиуд"
+                      }</h3>
+                      {product?.material.mn.map((m, index) => (
+                        <li key={index} className="text-sm lg:text-lg text-justify list-disc">{m}</li>
+                      ))}
+                    </ul>
+                </div>
+             </section>
+        </div>
+    </div>
+    );
+}

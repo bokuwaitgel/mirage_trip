@@ -6,18 +6,18 @@ import viza from "../../public/text";
 
 export default function Home() {
   return (
-   <div className="min-h-screen">
-      <div className="mx-auto">
-          <Navbar />
+    <div className="min-h-screen">
+    <div className="mx-auto">
+        <Navbar /> 
           <div className="flex-col">
-            <section className="flex min-h-screen w-full snap-start py-32" id="home">
-              <div className="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row lg:ml-10">
-                <div className="p-10 flex flex-1 flex-col justify-normal md:justify-center">
+          <section className="flex min-h-screen w-full snap-start py-32" id="home">
+              <div className="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row">
+                  <div className="p-10 pl-10 sm:pl-40  flex flex-1 flex-col justify-normal md:justify-center">
                     <h1 className="text-7xl  font-bold">
                       Mirage Trip
                     </h1>
                     <h1 className="mb-10 text-3xl font-bold">
-                      Travel Agency
+                     -- Travel Agency --
                     </h1>
                     <p>
                     🇺🇸АНУ-10 жил,🇨🇦Канад 4-10 жил,
@@ -30,13 +30,13 @@ export default function Home() {
                 </div>
                   <div className="p-10 flex flex-1 flex-col justify-normal md:justify-center">
                         <Image 
-                                src="/image.png" 
+                                src="/image.jpg" 
                                 className="a rounded-xl" 
                                 alt="logo" 
                                 width="0"
                                 height="0"
                                 sizes={"(max-width: 640px) 200vw, (max-width: 1024px) 200vw, 1024px"}
-                                style={{ width: '80%', height: 'auto' }} 
+                                style={{ width: '100%', height: 'auto' }} 
                         />
                   </div>
               </div>
@@ -47,35 +47,27 @@ export default function Home() {
                     <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
                         {
                             viza.map((item, index) => (
-                                <div key={index} className="p-3 mb-6 hover:shadow-2xl dark:hover:shadow-white rounded-2xl m-2">
-                                    <div className="mb-4 rounded-2xl">
-                                        <Image
-                                            
-                                            // check dark mode
-                                            src={item.background}
-                                            alt="logo" 
-                                            width="0"
-                                            height="0"
-                                            sizes={"(max-width: 640px) 200vw, (max-width: 1024px) 200vw, 1024px"}
-                                            style={{ width: '100%', height: 'auto' }}  
-                                        />
-                                        {/* <Link
-                                            className="flex justify-center items-center bg-opacity-80  absolute top-0 left-0 w-full h-full text-white rounded-2xl opacity-0 transition-all duration-300 transform group-hover:scale-105 text-xl group-hover:opacity-100"
-                                            href={`#${item.title.en}`}
-                                            target="_blank"
-                                            rel="noopener noreferrer"
-                                        >
-                                            Visite Website
-                                        </Link> */}
+                                <div key={index} className="p-3  hover:shadow-2xl dark:hover:shadow-white rounded-2xl m-2">
+                                    <Link href={{
+                                        pathname: '/viza/'+index,
+                                    }}
+                                        className="flex flex-col items-center justify-center gap-4">
+                                        <div className=" rounded-2xl">
+                                            <Image
+                                                
+                                                // check dark mode
+                                                src={item.background}
+                                                alt="logo" 
+                                                width="0"
+                                                height="0"
+                                                sizes={"(max-width: 640px) 200vw, (max-width: 1024px) 200vw, 1024px"}
+                                                style={{ width: '100%', height: 'auto' }}  
+                                            />
                                         </div>
                                         <h3 className="font-medium text-xl leading-8 text-center">
-                                        <Link
-                                            href="https://animeflyx.vercel.app/"
-                                            className="block relative group-hover:text-purple-500 transition-colors duration-200"
-                                        >
                                             <span dangerouslySetInnerHTML={{ __html: item.title.mn }} />
-                                        </Link>
                                         </h3>
+                                    </Link>
                                 </div>
                             ))
                         }
