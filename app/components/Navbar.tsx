@@ -3,7 +3,6 @@ import React from "react";
 import Image from "next/image";
 import { useState } from "react";
 import { ModeToggle } from "./Toggle";
-import { useTheme } from "next-themes";
 import { FiMenu } from 'react-icons/fi'
 import Link from "next/link";
 

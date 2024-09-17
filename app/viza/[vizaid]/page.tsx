@@ -1,12 +1,10 @@
 
 'use client'
-import { Metadata } from "next";
 
 import { useEffect, useState } from "react";
 import Navbar from "../../components/Navbar";
 
 import viza from "@/public/text";
-import { time } from "console";
 
 type Props = {
   params: { vizaid: string };
