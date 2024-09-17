@@ -60,5 +60,4 @@ const viza = [
     }
  
 ]
-export default texts
-export { viza }
+export default viza;
