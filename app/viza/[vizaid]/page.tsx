@@ -2,7 +2,6 @@
 'use client'
 
 import { useEffect, useState } from "react";
-import Navbar from "../../components/Navbar";
 
 import viza from "@/public/text";
 

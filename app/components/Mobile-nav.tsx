@@ -1,12 +1,9 @@
 import {
     Sheet,
     SheetContent,
-    SheetDescription,
-    SheetHeader,
-    SheetTitle,
     SheetTrigger,
   } from '@/components/ui/sheet';
-  import { AlignJustify, Apple } from 'lucide-react';
+  import { AlignJustify } from 'lucide-react';
   import Link from 'next/link';
   import Image from 'next/image';
   import { ModeToggle } from './Toggle';
