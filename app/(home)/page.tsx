@@ -1,6 +1,7 @@
 import Image from "next/image";
-import Navbar from "../components/Navbar";
 import Link from "next/link";
+import BlurFade from "@/components/magicui/blur-fade";
+import GradualSpacing from "@/components/magicui/gradual-spacing";
 
 import viza from "../../public/text";
 
@@ -8,17 +9,14 @@ export default function Home() {
   return (
     <div className="min-h-screen">
     <div className="mx-auto">
-        <Navbar /> 
           <div className="flex-col">
-          <section className="flex min-h-screen w-full snap-start py-32" id="home">
+          <section className="flex min-h-screen w- snap-start py-32" id="home">
+           
               <div className="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row">
                   <div className="p-10 pl-10 sm:pl-40  flex flex-1 flex-col justify-normal md:justify-center">
-                    <h1 className="text-7xl  font-bold">
-                      Mirage Trip
-                    </h1>
-                    <h1 className="mb-10 text-3xl font-bold">
-                     -- Travel Agency --
-                    </h1>
+                  
+                    <GradualSpacing className="text-3xl  font-bold" text="Mirage Trip"/>
+                    <GradualSpacing className="mb-10 text-1xl font-bold" text="-- Travel Agency --"/>
                     <p>
                     🇺🇸АНУ-10 жил,🇨🇦Канад 4-10 жил,
                     🇬🇧Англи 6 сар-2 жил,
@@ -27,16 +25,17 @@ export default function Home() {
                     🇦🇺Австралийн-1 жил хүртэлх визны зөвлөгөө үйлчилгээ, 
                     Виз мэдүүлэг болон 🇭🇺Унгар улсын 2 жилийн хөдөлмөрийн гэрээ
                     </p>
+                    
                 </div>
-                  <div className="p-10 flex flex-1 flex-col justify-normal md:justify-center">
+                  <div className="p-10 flex flex-1 flex-col items-center justify-center md:justify-center">
                         <Image 
-                                src="/image.jpg" 
+                                src="/front.png" 
                                 className="a rounded-xl" 
                                 alt="logo" 
                                 width="0"
                                 height="0"
                                 sizes={"(max-width: 640px) 200vw, (max-width: 1024px) 200vw, 1024px"}
-                                style={{ width: '100%', height: 'auto' }} 
+                                style={{ width: '70%', height: 'auto' }} 
                         />
                   </div>
               </div>
@@ -44,9 +43,10 @@ export default function Home() {
 
             <section id="viza">
                 <div className="container mx-auto xl:max-w-7xl flex min-h-screen w-full snap-start py-32">
-                    <div className="grid grid-cols-1 lg:grid-cols-3 gap-6">
+                    <div className="grid grid-cols-1 lg:grid-cols-4 gap-6 place-items-stretch">
                         {
                             viza.map((item, index) => (
+                              <BlurFade key={index} delay={0.25 + index * 0.05}>
                                 <div key={index} className="p-3  hover:shadow-2xl dark:hover:shadow-white rounded-2xl m-2">
                                     <Link href={{
                                         pathname: '/viza/'+index,
@@ -69,6 +69,7 @@ export default function Home() {
                                         </h3>
                                     </Link>
                                 </div>
+                                </BlurFade>
                             ))
                         }
                         
@@ -117,22 +118,7 @@ export default function Home() {
                         </div>
                         <div>МЕНЕЖЕР - 8003 3942</div>
                       </div>
-                      <div className="flex flex-row items-center gap-6">
-                        <div>
-                          <svg className="w-8 h-8 fill-[#1C274C]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
-                          <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" />
-                          </svg>
-                        </div>
-                        <div>ВИЗ МЭДҮҮЛЭГ – 9973 9942</div>
-                      </div>
-                      <div className="flex flex-row items-center gap-6">
-                        <div>
-                          <svg className="w-8 h-8 fill-[#1C274C]" xmlns="http://www.w3.org/2000/svg"  viewBox="0 0 24 24" fill="none">
-                          <path d="M16.5562 12.9062L16.1007 13.359C16.1007 13.359 15.0181 14.4355 12.0631 11.4972C9.10812 8.55901 10.1907 7.48257 10.1907 7.48257L10.4775 7.19738C11.1841 6.49484 11.2507 5.36691 10.6342 4.54348L9.37326 2.85908C8.61028 1.83992 7.13596 1.70529 6.26145 2.57483L4.69185 4.13552C4.25823 4.56668 3.96765 5.12559 4.00289 5.74561C4.09304 7.33182 4.81071 10.7447 8.81536 14.7266C13.0621 18.9492 17.0468 19.117 18.6763 18.9651C19.1917 18.9171 19.6399 18.6546 20.0011 18.2954L21.4217 16.883C22.3806 15.9295 22.1102 14.2949 20.8833 13.628L18.9728 12.5894C18.1672 12.1515 17.1858 12.2801 16.5562 12.9062Z" />
-                          </svg>
-                        </div>
-                        <div>ВИЗ МЭДҮҮЛЭГ – 8833 1125</div>
-                      </div>
+                      
                       
                       <div className="flex flex-row items-center gap-6">
                         <div>
