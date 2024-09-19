@@ -55,7 +55,14 @@ export default function ProductDetails({ params }: Props) {
                   </div>
               </section>
               <div className="absolute top-20 right-0 z-[-1]">
-                <Image src="/images/plus-group.png" alt="blob background shape" />
+                <Image 
+                src="/images/plus-group.png" 
+                alt="blob background shape" 
+                width={0}
+                height={0}
+                sizes="200vw"
+                style={{ width: '100%', height: 'auto' }}
+                />
               </div>
               
         </div>

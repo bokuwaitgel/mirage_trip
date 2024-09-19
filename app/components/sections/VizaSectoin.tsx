@@ -11,11 +11,11 @@ export default function VizaSection() {
                         Бидний санал болгож буй хөтөлбөрүүд
                     </p>
 
-                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10 place-items-stretch ">
+                    <div className="grid grid-cols-1 md:grid-cols-4 gap-4 mb-10 place-items-stretch">
                         {viza.map((v, index) => (
-                            <Link href={`/viza/${index}`} key={index}>
-                                    <CountryCard imageUrl={v.background} title={v.title.mn} />
-                            </Link>
+                            // <Link href={`/viza/${index}`} key={index}>
+                                    <CountryCard key={index} imageUrl={v.background} title={v.title.mn} index={index} />
+                            // </Link>
                         ))}
                     </div>
                 </div>

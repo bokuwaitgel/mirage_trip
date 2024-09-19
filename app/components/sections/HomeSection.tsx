@@ -2,7 +2,7 @@ import Image from "next/image";
 import GradualSpacing from "@/components/magicui/gradual-spacing";
 
 export default function HomeSection() {
-    return (<section className="flex  w- snap-start py-32" id="home">
+    return (<section className="flex snap-start py-32" id="home">
            
               <div className="flex flex-col-reverse items-center justify-center gap-8 lg:flex-row">
                   <div className="p-10 pl-10 sm:pl-40  flex flex-1 flex-col justify-normal md:justify-center">
@@ -22,12 +22,11 @@ export default function HomeSection() {
                   <div className="p-10 flex flex-1 flex-col items-center justify-center md:justify-center">
                         <Image 
                                 src="/images/lady-with-aircraft.png" 
-                                className="a rounded-xl" 
-                                alt="logo" 
-                                width="0"
-                                height="0"
-                                sizes={"(max-width: 640px) 200vw, (max-width: 1024px) 200vw, 1024px"}
-                                style={{ width: '70%', height: 'auto' }} 
+                                alt="test"
+                                width={0}
+                                height={0}
+                                sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
+                                style={{ width: '70%', height: 'auto' }}
                         />
                   </div>
               </div>

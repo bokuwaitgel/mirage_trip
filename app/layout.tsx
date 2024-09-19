@@ -40,7 +40,14 @@ export default function RootLayout({
             <SiteFooter />
             <div className="relative">
             <div className="absolute bottom-0 left-0 z-[-1] scale-x-[-1]">
-                <Image src="/images/plus-group.png" alt="blob background shape" />
+                <Image 
+                  src="/images/plus-group.png" 
+                  alt="blob background shape" 
+                  width={0}
+                  height={0}
+                  sizes="200vw"
+                  style={{ width: '100%', height: 'auto' }}
+                  />
               </div>
             </div>
         </ThemeProvider>
