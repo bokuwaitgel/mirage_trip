@@ -39,7 +39,7 @@ const viza = [
                 "Хувийн бизнестэй бол батлах бичиг баримт компанийн гэрчилгээ, Түрээсийн гэрээ, Татварын тодорхойлолт г.м /зөвхөн байгаа нөхцөлд/ ENG"
             ]   
         },
-        background: "/viza/usa.svg",
+        background: "/viza/usa.png",
     },
     {
         title: {
@@ -88,7 +88,7 @@ const viza = [
                 Аав/ээжийн итгэмжлэл"
             ]
         },
-        background: "/viza/uk.webp",
+        background: "/viza/uk.png",
     },
     {
         title: {
@@ -142,7 +142,7 @@ const viza = [
                 өдөртэй нь хавсаргах /заавал хавсаргах/"
             ]
         },
-        background: "/viza/ireland.webp",
+        background: "/viza/ireland.png",
     },
     {
         title: {
@@ -189,7 +189,7 @@ const viza = [
             Аав/ээжийн итгэмжлэл"
             ]
         },
-        background: "/viza/aus.webp",
+        background: "/viza/aus.jpg",
     },
     {
         title: {
@@ -237,7 +237,7 @@ const viza = [
                     
                 ]
         },
-        background: "/viza/canada.png",
+        background: "/viza/cnd.png",
     },
     {
         title: {
@@ -287,7 +287,7 @@ const viza = [
                 Аав/ээжийн итгэмжлэл"
             ]
         },
-        background: "/viza/newzealand.png",
+        background: "/viza/nze.png",
     },
     {
         title: {
@@ -330,7 +330,7 @@ const viza = [
                 Аав/ээжийн итгэмжлэл эсвэл гар өргөдөл",
             ]
         },
-        background: "/viza/japan.png",
+        background: "/viza/jpn.png",
     },
     {
         title: {
