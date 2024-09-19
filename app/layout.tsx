@@ -3,6 +3,7 @@ import { ThemeProvider } from "@/components/theme-provider"
 import Header from "./components/Header";
 import {SiteFooter} from "./components/Footer";
 import { Inter } from "next/font/google";
+import Image from "next/image";
 import "./globals.css";
 
 const inter = Inter({ subsets: ["latin"] });
@@ -39,7 +40,7 @@ export default function RootLayout({
             <SiteFooter />
             <div className="relative">
             <div className="absolute bottom-0 left-0 z-[-1] scale-x-[-1]">
-                <img src="/images/plus-group.png" alt="blob background shape" />
+                <Image src="/images/plus-group.png" alt="blob background shape" />
               </div>
             </div>
         </ThemeProvider>
@@ -47,3 +48,4 @@ export default function RootLayout({
     </html>
   );
 }
+

@@ -1,7 +1,7 @@
 'use client'
 
 import { useEffect, useState } from "react";
-
+import Image from "next/image";
 import viza from "@/public/text";
 
 type Props = {
@@ -55,7 +55,7 @@ export default function ProductDetails({ params }: Props) {
                   </div>
               </section>
               <div className="absolute top-20 right-0 z-[-1]">
-                <img src="/images/plus-group.png" alt="blob background shape" />
+                <Image src="/images/plus-group.png" alt="blob background shape" />
               </div>
               
         </div>
