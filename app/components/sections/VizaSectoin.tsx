@@ -1,4 +1,3 @@
-import Link from 'next/link'
 import viza from '../../../public/text'
 import CountryCard from "../common/CountryCard";
 
