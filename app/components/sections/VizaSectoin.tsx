@@ -1,7 +1,4 @@
-import Image from 'next/image'
 import Link from 'next/link'
-import BlurFade from '@/components/magicui/blur-fade'
-
 import viza from '../../../public/text'
 import CountryCard from "../common/CountryCard";
 
