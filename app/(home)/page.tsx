@@ -15,7 +15,7 @@ export default function Home() {
               alt="blob background shape" 
               width={0}
               height={0}
-              sizes="200vw"
+              sizes="300vw"
               style={{ width: '100%', height: 'auto' }}
 
             />
